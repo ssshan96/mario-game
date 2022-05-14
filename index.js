@@ -47,6 +47,10 @@ const keys ={
     left: {
         pressed: false
     },
+    shift: { 
+        pressed: false
+    },
+    
 }
 
 function animate() {
@@ -55,9 +59,18 @@ function animate() {
     player.update()
 
     if (keys.right.pressed){
-        player.velocity.x = 5
+        if (keys.shift.pressed){
+            player.velocity.x = 5 * 1.5
+        } else {
+            player.velocity.x = 5
+        }
+        
     } else if (keys.left.pressed){
-        player.velocity.x = -5
+        if (keys.shift.pressed){
+            player.velocity.x = -5 * 1.5
+        } else {
+            player.velocity.x = -5
+        }
     } else {
         player.velocity.x = 0
     }
@@ -67,6 +80,7 @@ animate()
 
 
 addEventListener('keydown', ({keyCode}) => {
+    console.log(keyCode)
     switch (keyCode) {
         case 65: //left (a)
             console.log('left')
@@ -82,6 +96,10 @@ addEventListener('keydown', ({keyCode}) => {
             break
         case 83: //down (s)
             console.log('down')
+            break
+        case 16: //sprint (s)
+            console.log('sprint')
+            keys.shift.pressed = true
             break
     }
 
@@ -104,6 +122,10 @@ addEventListener('keyup', ({keyCode}) => {
             break
         case 83: //down (s)
             console.log('down')
+            break
+        case 16: //sprint (s)
+            console.log('sprint')
+            keys.shift.pressed = false
             break
     }
     console.log(keys.right.pressed)
