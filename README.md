@@ -1,5 +1,5 @@
 # mario-game
-Simple single player with movement and gravity [05/12/22]
+Simple single player object with movement and gravity [05/12/22]
 
 # Test
 download files
