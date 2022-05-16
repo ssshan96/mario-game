@@ -1,0 +1,8 @@
+1. [Done: 10:58, 05/14/22] Project Setup
+2. [Done: 11:22, 05/14/22] Player and Enemy Creation
+3. [Done: 12.01, 05/14/22] Gravity
+4. [Done: 12:27, 05/14/22] Player movement
+5. Platforms
+6. Attacks
+7. Health Bar Interface
+8. Game Timers and Game Over
