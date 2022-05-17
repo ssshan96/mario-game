@@ -5,4 +5,3 @@ Simple single player object with movement and gravity [05/12/22]
 download files
 open index.html from local folder
 
-# BIG TEST FOR BRANDON
